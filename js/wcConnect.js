@@ -4,10 +4,11 @@ class WCConnect {
         var socket = null;
 //        this.PORT =  8000;
 //        this.ip ='localhost';
-//        this.IP ='rpsserver-rps.apps.us-east-2.online-starter.openshift.com';
+        this.IP ='rpsserver-rps.apps.us-east-2.online-starter.openshift.com';
 //        this.IP ='apps.us-east-2.online-starter.openshift.com';
-    this.PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8000;
-    this.IP = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || 'localhost' || '0.0.0.0';
+//    this.PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8000;
+    this.PORT = 8000;
+//    this.IP = process.env.IP  || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 
   }
