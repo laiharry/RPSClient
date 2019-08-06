@@ -6,7 +6,7 @@ class WCConnect {
 //        this.ip ='localhost';
 //        this.IP ='rpsserver-rps.apps.us-east-2.online-starter.openshift.com';
 //        this.IP ='apps.us-east-2.online-starter.openshift.com';
-    this.port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8000;
+    this.PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8000;
     this.IP = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || 'localhost' || '0.0.0.0';
 
 
@@ -28,7 +28,7 @@ class WCConnect {
 
 //            var s = new WebSocket(((window.location.protocol === "https:") ? "wss://" : "ws://") + window.location.host + "/ws");
 
-            this.socket = new WebSocket(`ws://${this.IP}:${this.port}`);
+            this.socket = new WebSocket(`ws://${this.IP}:${this.PORT}`);
 //            this.socket = new WebSocket(`ws://localhost:3000/ws`);
             this.socket.onmessage = function (event) {
                 console.log(event.data);
